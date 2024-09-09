@@ -26,10 +26,10 @@ const CanvasPage = () => {
     <section className="relative py-10 px-5">
       <div className="text-center mb-8">
         <p className="text-primary mb-4 text-xl md:text-2xl">
-          Timeless Canvas:
+          Reska Multi Usaha
         </p>
         <p className="font-bold text-4xl md:text-6xl lg:text-5xl">
-          Exploring Art History in 3D
+          Buku Menu 3D Digital
         </p>
       </div>
 

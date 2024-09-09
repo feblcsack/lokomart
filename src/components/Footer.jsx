@@ -8,9 +8,9 @@ const Footer = () => {
           <div class="mb-6 flex flex-col justify-between md:mb-0">
             <a href="#home" class="flex items-center">
               <img
-                src="./vite.svg"
+                src="/public/kai.png"
                 class="me-3 h-20 w-[180px]"
-                alt="FlowBite Logo"
+                alt="kai logo"
               />
             </a>
 

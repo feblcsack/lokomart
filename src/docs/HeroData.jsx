@@ -1,9 +1,9 @@
 const heroData = [
     {
       path: "/",
-      image: "/leonardo/hero2.jpg",
-      title: "The Painters Symphony",
-      description: "Discover the World of Painters and Their Artistic Masterpieces."
+      image: "/reska.jpg",
+      title: "Pesan Makanan di Kereta?",
+      description: "Kini jadi lebih mudah"
     },
     {
       path: "/vincent",

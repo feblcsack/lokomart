@@ -23,7 +23,6 @@ const VincentPaintings = [
       description: "Van Gogh lived in an apartment in Montmartre, above the city of Paris. This afforded him a beautiful view of the Paris skyline, which he painted several times.",
       image: "/vincent/paris/4.png",
     },
-    //aries
     {
       year: "aries",
       title: "Sunflowers (1888)",

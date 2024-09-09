@@ -3,10 +3,10 @@ import { atom, useAtom } from "jotai";
 import { useEffect } from "react";
 
 const pictures = [
-  "DSC00680",
-  "DSC00933",
-  "DSC00966",
-  "DSC00983",
+  "2",
+  "3",
+  "4",
+  "5",
   "DSC01011",
   "DSC01040",
   "DSC01064",
@@ -24,7 +24,7 @@ const pictures = [
 export const pageAtom = atom(0);
 export const pages = [
   {
-    front: "book-cover",
+    front: "1",
     back: pictures[0],
   },
 ];
@@ -37,7 +37,7 @@ for (let i = 1; i < pictures.length - 1; i += 2) {
 
 pages.push({
   front: pictures[pictures.length - 1],
-  back: "book-back",
+  back: "6",
 });
 
 export const UI = () => {
@@ -62,7 +62,7 @@ export const UI = () => {
               }`}
               onClick={() => setPage(index)}
             >
-              {index === 0 ? "Cover" : `Page ${index}`}
+              {index === 0 ? "Cover" : `Hal ${index}`}
             </button>
           ))}
           <button

@@ -5,6 +5,7 @@ import Paintings from "../templates/Paintings";
 import leonardoPaintings from "../docs/LeonardoPaintings";
 import ArtTimeline from "../components/ArtTimeline";
 import CanvasPage from "./CanvasPage";
+import { HeroParallaxDemo } from "../test";
 
 const Leonardo = () => {
   return (
@@ -12,13 +13,15 @@ const Leonardo = () => {
       <section id="hero">
       <Hero />
       </section>
+      
       <Gallery />
       <Paintings
         painterData={leonardoPaintings}
         painterName="Leonardo Da Vinci"
       />
-      <ArtTimeline />
+      {/* <ArtTimeline /> */}
       <CanvasPage />
+      <HeroParallaxDemo/>
     </div>
   );
 };

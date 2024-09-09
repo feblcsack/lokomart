@@ -28,8 +28,8 @@ const Paintings = ({ painterData = [], painterName }) => {
     return (
         <div className="relative max-w-screen-2xl mx-auto py-12 md:py-24 w-full flex flex-col items-center px-5">
             <div className="text-center mb-12">
-                <p className="text-primary text-xl md:text-2xl">{painterName}</p>
-                <p className="font-bold text-4xl md:text-6xl lg:text-7xl">Paintings</p>
+                <p className="text-primary text-xl md:text-2xl">Reska Multi Usaha</p>
+                <p className="font-bold text-4xl md:text-6xl lg:text-7xl">Makanan</p>
                 <div className="bg-white/80 text-primary bg-opacity-75 rounded-3xl sedow w-full md:max-w-5xl text-center p-1 md:p-5 my-8 md:my-10">
                     <div className="flex flex-wrap gap-5 py-1 px-3 justify-center md:gap-16 text-sm md:text-lg lg:text-xl">
                         {categories.map(category => (

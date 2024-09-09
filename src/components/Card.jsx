@@ -1,7 +1,13 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import PaymentModal from './PaymentModal'; // Import modal pembayaran
 
 const Card = ({ title, description, image, isOpen, onToggle }) => {
   const cardRef = useRef(null);
+  const [isModalOpen, setModalOpen] = useState(false); // State untuk modal pembayaran
+
+  // Handler untuk membuka dan menutup modal
+  const openModal = () => setModalOpen(true);
+  const closeModal = () => setModalOpen(false);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -29,22 +35,33 @@ const Card = ({ title, description, image, isOpen, onToggle }) => {
         className="w-full h-52 md:h-60 object-cover"
         alt={title}
       />
-      <div className="p-6"> 
-        <h5 className="text-2xl font-bold mb-3">{title}</h5> 
+      <div className="p-6">
+        <h5 className="text-2xl font-bold mb-3">{title}</h5>
         <div
-          className={`transition-all duration-500 ease-in-out overflow-hidden ${isOpen ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}
+          className={`transition-all duration-500 ease-in-out overflow-hidden ${
+            isOpen ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'
+          }`}
         >
-          <p className="text-gray-600 mb-4 text-md">
-            {description}
-          </p>
+          <p className="text-gray-600 mb-4 text-md">{description}</p>
         </div>
         <button
           onClick={onToggle}
           className="bg-primary text-white py-2 px-6 mt-2 hover:bg-primary-dark transition-colors duration-300 rounded-lg"
         >
-          {isOpen ? 'Read Less' : 'Read More'}
+          {isOpen ? 'Tutup' : 'Deskripsi'}
+        </button>
+
+        {/* Tombol Beli Sekarang */}
+        <button
+          onClick={openModal}
+          className="bg-green-500 text-white py-2 px-6 mt-2 hover:bg-green-600 transition-colors duration-300 rounded-full ml-12"
+        >
+          Beli Sekarang!
         </button>
       </div>
+
+      {/* Modal Pembayaran */}
+      <PaymentModal isOpen={isModalOpen} onClose={closeModal} />
     </div>
   );
 };

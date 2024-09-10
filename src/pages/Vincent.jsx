@@ -4,7 +4,7 @@ import Hero from "../templates/Hero";
 import Gallery from "../templates/Galery";
 import VincentPaintings from "../docs/VincentPaintings";
 import Paintings from "../templates/Paintings";
-import ArtTimeline from "../components/ArtTimeline";
+import { HeroParallaxDemo } from "../test";
 import CanvasPage from "./CanvasPage";
 
 const Vincent = () => {
@@ -18,8 +18,8 @@ const Vincent = () => {
         painterData={VincentPaintings}
         painterName="Vincent Van Gogh"
       />
-      <ArtTimeline />
       <CanvasPage />
+      <HeroParallaxDemo/>
     </div>
   );
 };

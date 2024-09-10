@@ -6,34 +6,34 @@ const Navbar = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [isScrolling, setIsScrolling] = useState(false);
 
-  useEffect(() => {
-    let lastScrollTop = 0;
-    let scrollTimeout;
+  // useEffect(() => {
+  //   let lastScrollTop = 0;
+  //   let scrollTimeout;
 
-    const handleScroll = () => {
-      const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  //   const handleScroll = () => {
+  //     const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-      if (currentScrollTop > lastScrollTop) {
-        setIsScrolling(true);
-        setIsVisible(false);
-      } else {
-        setIsScrolling(false);
-        setIsVisible(true);
-      }
+  //     if (currentScrollTop > lastScrollTop) {
+  //       setIsScrolling(true);
+  //       setIsVisible(false);
+  //     } else {
+  //       setIsScrolling(false);
+  //       setIsVisible(true);
+  //     }
 
-      lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
+  //     lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
 
-      clearTimeout(scrollTimeout);
-      scrollTimeout = setTimeout(() => {
-        setIsScrolling(false);
-        setIsVisible(true);
-      }, 200);
-    };
+  //     clearTimeout(scrollTimeout);
+  //     scrollTimeout = setTimeout(() => {
+  //       setIsScrolling(false);
+  //       setIsVisible(true);
+  //     }, 200);
+  //   };
 
-    window.addEventListener('scroll', handleScroll);
+  //   window.addEventListener('scroll', handleScroll);
 
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  //   return () => window.removeEventListener('scroll', handleScroll);
+  // }, []);
 
   return (
     <nav

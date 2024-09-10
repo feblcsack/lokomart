@@ -5,8 +5,8 @@ const galleryData = [
         { src: "/leonardo/monalisa.png", title: "Mona Lisa" },
         { src: "/leonardo/supper.png", title: "The Last Supper" }
       ],
-      mainImage: { src: "/leonardo/leonardo.png", title: "Leonardo Da Vinci" },
-      description: "a Renaissance artist, inventor, and scientist who is widely regarded as one of the greatest minds in human history. He was born in the town of Vinci, Italy, and was the illegitimate son of a wealthy notary and a peasant woman.",
+      mainImage: { src: "/makanan/main.jpg", title: "Makanan" },
+      description: "pokoknya jual makanan",
       born: "April 15, 1452",
       died: "May 2, 1519"
     },
@@ -16,8 +16,8 @@ const galleryData = [
         { src: "/vincent/gal1.png", title: "The Siesta" },
         { src: "/vincent/gal2.png", title: "The Starry Night" }
       ],
-      mainImage: { src: "/vincent/vincent.png", title: "Vincent Van Gogh" },
-      description: "Dutch painter, generally considered the greatest after Rembrandt van Rijn, and one of the greatest of the Post-Impressionists. The striking colour, emphatic brushwork, and contoured forms of his work powerfully influenced the current of Expressionism in modern art.",
+      mainImage: { src: "/makanan/main.jpg", title: "Minuman" },
+      description: "buat minuman aja",
       born: "March 30, 1853",
       died: "July 29, 1890"
     },

@@ -3,8 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { FaSearch } from 'react-icons/fa';
 import heroData from '../docs/HeroData';
 import { FlipWords } from '../components/ui/flip-words'; 
-import { PlaceholdersAndVanishInput } from '../components/ui/placeholders-and-vanish-input'; // Impor komponen baru
-
+import { PlaceholdersAndVanishInput } from '../components/ui/placeholders-and-vanish-input'; 
 const Hero = () => {
   const location = useLocation();
   const { pathname } = location;
@@ -88,6 +87,7 @@ const Hero = () => {
             >
               Minuman
             </Link>
+            
           </div>
         </div>
       </div>

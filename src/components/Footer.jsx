@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 const Footer = () => {
   return (
@@ -8,8 +8,8 @@ const Footer = () => {
           <div class="mb-6 flex flex-col justify-between md:mb-0">
             <a href="#home" class="flex items-center">
               <img
-                src="/public/kai.png"
-                class="me-3 h-20 w-[180px]"
+                src="/public/kai3.png"
+                class="mt-5 w-[220px]"
                 alt="kai logo"
               />
             </a>
@@ -21,11 +21,15 @@ const Footer = () => {
               <ul class="font-medium text-white/60">
                 <li class="mb-4 flex items-center gap-3 text-base">
                   <ion-icon name="location"></ion-icon>
-                  <a href="#" class="hover:underline">SMK Negeri 46 Jakarta</a>
+                  <a href="#" class="hover:underline">
+                    PT. RESKA MULTI USAHA
+                  </a>
                 </li>
                 <li class="mb-4 flex items-center gap-3 text-base">
                   <ion-icon name="mail"></ion-icon>
-                  <a href="#" class="hover:underline">seniin@gmail.com</a>
+                  <a href="#" class="hover:underline">
+                    reskamultiusaha@gmail.com
+                  </a>
                 </li>
               </ul>
             </div>
@@ -37,23 +41,31 @@ const Footer = () => {
               </h2>
               <ul class="font-medium text-white/60">
                 <li class="mb-4">
-                  <a href="#home" class="hover:underline">Beranda</a>
+                  <a href="#home" class="hover:underline">
+                    Beranda
+                  </a>
                 </li>
                 <li class="mb-4">
-                  <a href="#about" class="hover:underline">Tentang</a>
+                  <a href="#about" class="hover:underline">
+                    Tentang
+                  </a>
                 </li>
                 <li class="mb-4">
-                  <a href="#kasus" class="hover:underline">Kasus</a>
+                  <a href="#kasus" class="hover:underline">
+                    Menu
+                  </a>
                 </li>
                 <li class="mb-4">
-                  <a href="#pengaruh" class="hover:underline">Pengaruh</a>
+                  <a href="#pengaruh" class="hover:underline">
+                    Berita
+                  </a>
                 </li>
-                <li class="mb-4">
+                {/* <li class="mb-4">
                   <a href="#data" class="hover:underline">Data</a>
                 </li>
                 <li class="mb-4">
                   <a href="#dokumentasi" class="hover:underline">Dokumentasi</a>
-                </li>
+                </li> */}
               </ul>
             </div>
 
@@ -63,43 +75,48 @@ const Footer = () => {
               </h2>
               <ul class="font-medium text-white/60">
                 <li class="mb-4">
-                  <a href="https://Detik.com" class="lowercase hover:underline"
-                    >Detik.com</a
-                  >
+                  <a href="https://Detik.com" class="lowercase hover:underline">
+                    Detik.com
+                  </a>
                 </li>
                 <li class="mb-4">
                   <a
                     href="https://Kompasiana.com"
                     class="lowercase hover:underline"
-                    >Kompasiana
+                  >
+                    Kompasiana
                   </a>
                 </li>
                 <li class="mb-4">
                   <a
                     href="https://Channel9.id"
                     class="lowercase hover:underline"
-                    >Channel9.id
+                  >
+                    Channel9.id
                   </a>
                 </li>
                 <li class="mb-4">
                   <a
                     href="https://Goodstats.id"
                     class="lowercase hover:underline"
-                    >Goodstats.id
+                  >
+                    Goodstats.id
                   </a>
                 </li>
                 <li class="mb-4">
                   <a
                     href="https://pusiknas.polri.go.id/"
                     class="lowercase hover:underline"
-                    >pusiknas.polri
+                  >
+                    pusiknas.polri
                   </a>
                 </li>
                 <li class="mb-4">
                   <a
                     href="https://www.haibunda.com/"
                     class="lowercase hover:underline"
-                    >haibunda.com
+                  >
+                    haibunda.com
                   </a>
                 </li>
               </ul>
@@ -111,9 +128,9 @@ const Footer = () => {
               </h2>
               <ul class="font-medium text-white/60">
                 <li class="mb-4">
-                  <a href="https://www.freepik.com/" class="hover:underline"
-                    >Freepik</a
-                  >
+                  <a href="https://www.freepik.com/" class="hover:underline">
+                    Reska Multi Usaha
+                  </a>
                 </li>
               </ul>
             </div>
@@ -121,13 +138,13 @@ const Footer = () => {
         </div>
         <hr class="my-6 border-white sm:mx-auto lg:my-8" />
         <div class="sm:flex sm:items-center sm:justify-between">
-          <span class="text-center text-sm text-white/60"
-            >Dibuat oleh tim Seni
+          <span class="text-center text-sm text-white/60">
+            Dibuat oleh tim PKL SMKN 46 JAKARTA
           </span>
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

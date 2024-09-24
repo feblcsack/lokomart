@@ -6,6 +6,7 @@ import VincentPaintings from "../docs/VincentPaintings";
 import Paintings from "../templates/Paintings";
 import { HeroParallaxDemo } from "../test";
 import CanvasPage from "./CanvasPage";
+import CardAsli from "../components/CardAsli";
 
 const Vincent = () => {
   const location = useLocation();
@@ -13,11 +14,8 @@ const Vincent = () => {
   return (
     <div>
       <Hero />
-      <Gallery />
-      <Paintings
-        painterData={VincentPaintings}
-        painterName="Vincent Van Gogh"
-      />
+      {/* <Gallery /> */}
+      <CardAsli/>
       <CanvasPage />
       <HeroParallaxDemo/>
     </div>

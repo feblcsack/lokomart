@@ -19,6 +19,10 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+
+
+    console.log('%c Selamat Datang!', 'color: #00ff00; font-size: 24px; font-weight: bold;');
+
     setTimeout(() => {
       setLoading(false);
     }, 2000);
@@ -38,7 +42,6 @@ function App() {
           <Route path="/dali" element={<Dali />} />
         </Routes>
       )}
-    
       <Footer />
     </>
   );

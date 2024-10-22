@@ -1,20 +1,13 @@
-// src/components/PaymentModal.jsx
 import React from "react";
 
 const PaymentModal = ({ isOpen, onClose }) => {
-  const handlePayment = (e) => {
-    e.preventDefault();
-    alert("Pembayaran berhasil!");
-    onClose(); // Menutup modal setelah pembayaran berhasil
-  };
-
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+    <div className="fixed inset-0 flex items-center justify-center mt-10 bg-black bg-opacity-50 z-50">
       <div className="bg-white p-6 rounded-lg w-11/12 max-w-md">
         <h2 className="text-2xl font-bold mb-4">Isi Detail Pembayaran</h2>
-        <form onSubmit={handlePayment}>
+        <form>
           <div className="mb-4">
             <label className="block text-gray-700">Nama Lengkap:</label>
             <input

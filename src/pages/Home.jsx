@@ -11,8 +11,7 @@ const Home = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">
       <h1 className="text-3xl font-bold mb-8">Selamat Datang di Lokomart</h1>
-      
-      {/* Tombol untuk membuka modal */}
+
       <button
         onClick={openModal}
         className="bg-primary text-white rounded-full px-5 py-2 hover:bg-primary-dark transition duration-300"
@@ -20,7 +19,6 @@ const Home = () => {
         Beli Sekarang
       </button>
 
-      {/* Modal Pembayaran */}
       <PaymentModal isOpen={isModalOpen} onClose={closeModal} />
     </div>
   );

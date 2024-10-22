@@ -1,30 +1,12 @@
-import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
-import { FaSearch } from "react-icons/fa";
+import React from "react";
+import { Link } from "react-router-dom";
 import heroData from "../docs/HeroData";
 import { FlipWords } from "../components/ui/flip-words";
-import { PlaceholdersAndVanishInput } from "../components/ui/placeholders-and-vanish-input";
-const Hero = () => {
-  const location = useLocation();
-  const { pathname } = location;
+import CardContainer from "../components/CardContainer";
 
-  const currentData = heroData.find((data) => data.path === pathname) || {};
-  const { image, title, description } = currentData;
-
-  const placeholders = [
-    "Ayo, masukkan kode booking",
-    "Masukkan kode booking ",
-    "Di mana kode booking Anda?",
-  ];
-
-  const handleChange = (e) => {
-    console.log(e.target.value);
-  };
-
-  const onSubmit = (e) => {
-    e.preventDefault();
-    console.log("submitted");
-  };
+const Hero = ({ inputCode, handleChange, onSubmit }) => {
+  const currentData = heroData[0] || {};
+  const { image, description } = currentData;
 
   const words = ["Makanan", "Minuman"];
 
@@ -37,13 +19,21 @@ const Hero = () => {
       <div className="absolute bottom-0 left-0 w-full h-60 bg-gradient-to-t from-white/100 via-white/40 to-transparent"></div>
 
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white p-4">
-        <div className="mb-4 flex items-center">
-          <PlaceholdersAndVanishInput
-            placeholders={placeholders}
+        <form onSubmit={onSubmit} className="mb-4">
+          <input
+            type="text"
+            value={inputCode}
             onChange={handleChange}
-            onSubmit={onSubmit}
+            placeholder="Masukkan kode unik"
+            className="p-2 rounded-md border border-gray-300 text-black"
           />
-        </div>
+          <button
+            type="submit"
+            className="ml-4 px-4 py-2 bg-orange-500 hover:bg-orange-600 text-white rounded-md"
+          >
+            Submit
+          </button>
+        </form>
 
         <div className="mt-20">
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold">
@@ -51,37 +41,6 @@ const Hero = () => {
             di Kereta?
           </h1>
           <p className="mt-3 text-lg md:text-xl">{description}</p>
-        </div>
-      </div>
-
-      <div className="relative z-50 bottom-32 mt-5 md:bottom-40 left-0 w-full flex flex-col items-center p-2 md:p-6 py-10">
-        <div className="bg-primary text-white pt-2 px-6 md:px-20 rounded-t-2xl shadow-lg text-center">
-          <h5 className="text-2xl font-semibold mb-1">Menu Kami</h5>
-        </div>
-
-        <div className="bg-white/80 text-primary bg-opacity-75 rounded-3xl shadow-lg w-[90%] md:max-w-[350px] text-center p-2 md:p-4">
-          <div className="flex gap-2 md:gap-7 text-xs md:text-2xl">
-            <Link
-              to="/"
-              className={`block py-2 md:px-4 ml-4 rounded-2xl transition-all duration-300 ${
-                pathname === "/"
-                  ? "bg-primary text-white px-2 md:px-10"
-                  : "text-primary hover:bg-gray-200"
-              }`}
-            >
-              Makanan & Minuman
-            </Link>
-            {/* <Link
-              to="/vincent"
-              className={`block py-2 md:px-4 rounded-2xl transition-all duration-300 ${
-                pathname === "/vincent"
-                  ? "bg-primary text-white px-2 md:px-10"
-                  : "text-primary hover:bg-gray-200"
-              }`}
-            >
-              Minuman
-            </Link> */}
-          </div>
         </div>
       </div>
     </div>

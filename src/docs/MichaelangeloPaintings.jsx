@@ -23,7 +23,6 @@ const MichaelangeloPaintings = [
       description: "This painting depicts the moment when the apostle Paul, formerly known as Saul of Tarsus, was converted to Christianity. The painting is based on the biblical account of the event, which is recorded in the Book of Acts, Chapter 9.",
       image: "/michael/a4.png",
     },
-    //Statue
     {
       year: "Statues",
       title: "St. Jerome In The Wilderness (1480)",

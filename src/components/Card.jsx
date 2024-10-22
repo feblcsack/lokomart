@@ -1,11 +1,10 @@
-import React, { useEffect, useRef, useState } from 'react';
-import PaymentModal from './PaymentModal'; // Import modal pembayaran
+import React, { useEffect, useRef, useState } from "react";
+import PaymentModal from "./PaymentModal"; 
 
 const Card = ({ title, description, image, isOpen, onToggle }) => {
   const cardRef = useRef(null);
-  const [isModalOpen, setModalOpen] = useState(false); // State untuk modal pembayaran
+  const [isModalOpen, setModalOpen] = useState(false); 
 
-  // Handler untuk membuka dan menutup modal
   const openModal = () => setModalOpen(true);
   const closeModal = () => setModalOpen(false);
 
@@ -18,10 +17,10 @@ const Card = ({ title, description, image, isOpen, onToggle }) => {
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
 
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [isOpen, onToggle]);
 
@@ -39,7 +38,7 @@ const Card = ({ title, description, image, isOpen, onToggle }) => {
         <h5 className="text-2xl font-bold mb-3">{title}</h5>
         <div
           className={`transition-all duration-500 ease-in-out overflow-hidden ${
-            isOpen ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'
+            isOpen ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
           }`}
         >
           <p className="text-gray-600 mb-4 text-md">{description}</p>
@@ -48,10 +47,9 @@ const Card = ({ title, description, image, isOpen, onToggle }) => {
           onClick={onToggle}
           className="bg-primary text-white py-2 px-6 mt-2 hover:bg-primary-dark transition-colors duration-300 rounded-lg"
         >
-          {isOpen ? 'Tutup' : 'Deskripsi'}
+          {isOpen ? "Tutup" : "Deskripsi"}
         </button>
 
-        {/* Tombol Beli Sekarang */}
         <button
           onClick={openModal}
           className="bg-green-500 text-white py-2 px-6 mt-2 hover:bg-green-600 transition-colors duration-300 rounded-full ml-12"
@@ -59,8 +57,6 @@ const Card = ({ title, description, image, isOpen, onToggle }) => {
           Beli Sekarang!
         </button>
       </div>
-
-      {/* Modal Pembayaran */}
       <PaymentModal isOpen={isModalOpen} onClose={closeModal} />
     </div>
   );

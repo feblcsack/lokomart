@@ -13,9 +13,7 @@ const Dali = () => {
   return (
     <div>
       <Hero />
-
       <Gallery/>
-
       <Paintings painterData={DaliPaintings} painterName="Salvador Dali" />
       <ArtTimeline />
               <CanvasPage />

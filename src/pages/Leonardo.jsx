@@ -17,7 +17,7 @@ const Leonardo = () => {
   const onSubmit = (e) => {
     e.preventDefault();
     startTransition(() => {
-      if (inputCode.toUpperCase() === "RESKA") {
+      if (inputCode.to() === "RESKA") {
         setShowCard(true);
         setShowMenu(true); // Tampilkan menu saat kode benar
       } else {
@@ -35,14 +35,14 @@ const Leonardo = () => {
         handleChange={handleChange}
         onSubmit={onSubmit}
       />
-       {showMenu && ( 
+      {showMenu && (
         <div className="relative z-50 bottom-32 mt-10 md:bottom-40 left-0 w-full flex flex-col items-center p-2 md:p-6 py-10">
           <div className="bg-primary text-white pt-2 px-6 md:px-20 rounded-t-2xl shadow-lg text-center">
             <h5 className="text-2xl font-semibold mb-1">Menu Kami</h5>
           </div>
 
           <div className="bg-white/80 text-primary bg-opacity-75 rounded-3xl shadow-lg w-[90%] md:max-w-[350px] text-center p-2 md:p-4">
-            <div className="flex gap-2 md:gap-7 text-xs md:text-2xl">
+            <div className=" gap-2 md:gap-7 text-xs md:text-2xl">
               <Link
                 to="/"
                 className="block py-2 md:px-4 ml-4 rounded-2xl transition-all duration-300 bg-primary text-white px-2 md:px-10"
@@ -59,9 +59,7 @@ const Leonardo = () => {
           <CanvasPage />
         </section>
       )}
-      
-     
-     
+
       <HeroParallaxDemo />
     </div>
   );

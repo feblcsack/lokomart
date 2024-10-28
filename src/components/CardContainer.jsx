@@ -4,7 +4,7 @@ import ThreeDObject from "./ThreeDObject";
 
 const CardContainer = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 ml-60 mt-10 lg:grid-cols-2 gap-8 justify-center">
+    <div className="grid grid-cols-1 gap-6 p-4 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 mx-auto mt-10 max-w-screen-lg">
       <CardComponent
         ThreeDContent={<ThreeDObject modelUrl="/3d/pop.glb" />}
         title="Pop Mie 3D"

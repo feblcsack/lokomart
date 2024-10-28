@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react';
-import logoImg from '/kai.png';
+import React, { useEffect, useRef, useState } from "react";
+import logoImg from "/kai.png";
 
 const Navbar = () => {
   const navbarRef = useRef(null);
@@ -39,7 +39,9 @@ const Navbar = () => {
     <nav
       ref={navbarRef}
       className={`fixed top-0 left-0 right-0 z-[99999] bg-white text-black shadow-lg border-b border-gray-300 ${
-        isVisible && !isScrolling ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'
+        isVisible && !isScrolling
+          ? "translate-y-0 opacity-100"
+          : "-translate-y-full opacity-0"
       } transition-transform duration-300 ease-out`}
     >
       <div className="flex items-center justify-between p-4">
@@ -47,7 +49,7 @@ const Navbar = () => {
         <div className="flex items-center">
           <img src={logoImg} alt="Logo" className="w-30 h-20 " />
         </div>
-        
+
         {/* Menu di kanan */}
         <ul className="flex space-x-2 ml-auto mr-5">
           <li className="relative group">
@@ -72,7 +74,8 @@ const Navbar = () => {
         <div className="flex items-center">
           <a
             href="#3d"
-            className="bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-orange-600 transition-all duration-300"
+            className="bg-orange-500 text-center text-white px-4 py-2 rounded-full hover:bg-orange-600 transition-all duration-300 
+              sm:px-3 sm:py-1.5 sm:text-sm md:px-5 md:py-2.5 md:text-base lg:px-6 lg:py-3 lg:text-lg"
           >
             Lacak Pesananmu!
           </a>

@@ -71,11 +71,11 @@ const Navbar = () => {
         </ul>
 
         {/* Tombol 3D di kanan */}
-        <div className="flex items-center">
+        <div className="flex relative">
           <a
             href="#3d"
             className="bg-orange-500 text-center text-white px-4 py-2 rounded-full hover:bg-orange-600 transition-all duration-300 
-              sm:px-3 sm:py-1.5 sm:text-sm md:px-5 md:py-2.5 md:text-base lg:px-6 lg:py-3 lg:text-lg"
+              sm:px-3 sm:py-1.5 sm:text-sm  md:px-5 md:py-2.5 md:text-base lg:px-6 lg:py-3 lg:text-lg"
           >
             Lacak Pesananmu!
           </a>

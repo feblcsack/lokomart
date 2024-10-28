@@ -17,7 +17,7 @@ const Leonardo = () => {
   const onSubmit = (e) => {
     e.preventDefault();
     startTransition(() => {
-      if (inputCode.to() === "RESKA") {
+      if (inputCode.toUpperCase() === "RESKA") {
         setShowCard(true);
         setShowMenu(true); // Tampilkan menu saat kode benar
       } else {

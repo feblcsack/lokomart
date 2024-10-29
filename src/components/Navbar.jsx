@@ -5,35 +5,11 @@ const Navbar = () => {
   const navbarRef = useRef(null);
   const [isVisible, setIsVisible] = useState(true);
   const [isScrolling, setIsScrolling] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // useEffect(() => {
-  //   let lastScrollTop = 0;
-  //   let scrollTimeout;
-
-  //   const handleScroll = () => {
-  //     const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-  //     if (currentScrollTop > lastScrollTop) {
-  //       setIsScrolling(true);
-  //       setIsVisible(false);
-  //     } else {
-  //       setIsScrolling(false);
-  //       setIsVisible(true);
-  //     }
-
-  //     lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
-
-  //     clearTimeout(scrollTimeout);
-  //     scrollTimeout = setTimeout(() => {
-  //       setIsScrolling(false);
-  //       setIsVisible(true);
-  //     }, 200);
-  //   };
-
-  //   window.addEventListener('scroll', handleScroll);
-
-  //   return () => window.removeEventListener('scroll', handleScroll);
-  // }, []);
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
     <nav
@@ -51,7 +27,7 @@ const Navbar = () => {
         </div>
 
         {/* Menu di kanan */}
-        <ul className="flex space-x-2 ml-auto mr-5">
+        <ul className="hidden md:flex space-x-2 ml-auto mr-5">
           <li className="relative group">
             <a
               href="#hero"
@@ -71,16 +47,52 @@ const Navbar = () => {
         </ul>
 
         {/* Tombol 3D di kanan */}
-        <div className="flex relative">
+        <div className="hidden md:flex relative">
           <a
             href="#3d"
-            className="bg-orange-500 text-center text-white px-4 py-2 rounded-full hover:bg-orange-600 transition-all duration-300 
-              sm:px-3 sm:py-1.5 sm:text-sm  md:px-5 md:py-2.5 md:text-base lg:px-6 lg:py-3 lg:text-lg"
+            className="bg-orange-500 text-center text-white px-4 py-2 rounded-full hover:bg-orange-600 transition-all duration-300"
           >
             Lacak Pesananmu!
           </a>
         </div>
+
+        {/* Button Hamburger untuk Mobile */}
+        <button
+          onClick={toggleMenu}
+          className="md:hidden flex flex-col space-y-1 items-center"
+        >
+          <div className="w-6 h-1 bg-black"></div>
+          <div className="w-6 h-1 bg-black"></div>
+          <div className="w-6 h-1 bg-black"></div>
+        </button>
       </div>
+
+      {/* Menu Mobile */}
+      {isMenuOpen && (
+        <div className="md:hidden bg-white w-full pb-10 flex flex-col items-center space-y-4 pt-4">
+          <a
+            href="#hero"
+            className="block px-3 py-2 rounded hover:bg-green-700 hover:text-white transition-all duration-300"
+            onClick={toggleMenu}
+          >
+            Beranda
+          </a>
+          <a
+            href="#about"
+            className="block px-3 py-2 rounded hover:bg-green-700 hover:text-white transition-all duration-300"
+            onClick={toggleMenu}
+          >
+            Tentang
+          </a>
+          <a
+            href="#3d"
+            className="bg-orange-500 text-center text-white px-4 py-2 rounded-full hover:bg-orange-600 transition-all duration-300"
+            onClick={toggleMenu}
+          >
+            Lacak Pesananmu!
+          </a>
+        </div>
+      )}
     </nav>
   );
 };

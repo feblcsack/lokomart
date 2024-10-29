@@ -29,7 +29,7 @@ const Hero = ({ inputCode, handleChange, onSubmit }) => {
           />
           <button
             type="submit"
-            className="ml-4 px-4 py-2 bg-orange-500 hover:bg-orange-600 text-white rounded-md"
+            className="ml-4 mt-3 md:mt-0 px-4 py-2 bg-orange-500 hover:bg-orange-600 text-white rounded-md"
           >
             Submit
           </button>

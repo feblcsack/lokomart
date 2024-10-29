@@ -20,7 +20,7 @@ const Leonardo = () => {
 
     setTimeout(() => {
       setLoading(false);
-    }, 5000);
+    }, 500);
   }, []);
 
   const handleChange = (e) => {

@@ -5,6 +5,8 @@ import { HeroParallaxDemo } from "../test";
 import CardContainer from "../components/CardContainer";
 import { Link } from "react-router-dom";
 import Loader from "../components/Loader";
+import { Card } from "./Card";
+import ThreeDObject from "../components/ThreeDObject";
 
 const Leonardo = () => {
   const [inputCode, setInputCode] = useState("");
@@ -77,12 +79,12 @@ const Leonardo = () => {
           {showCard && (
             <section id="card-container" className="my-10">
               <CardContainer />
+              <Card ThreeDContent={<ThreeDObject modelUrl="/public/3d/aqua.glb" />}/>
               <CanvasPage />
             </section>
           )}
         </>
       )}
-
       <HeroParallaxDemo />
     </div>
   );

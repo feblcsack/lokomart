@@ -1,7 +1,7 @@
 const heroData = [
   {
     path: "/",
-    image: "/reska.jpg",
+    image: "/visi.jpg",
     title: "Pesan Makanan di Kereta?",
     description: "Kini jadi lebih mudah",
   },

@@ -31,7 +31,7 @@ const Navbar = () => {
           <li className="relative group">
             <a
               href="#hero"
-              className="block px-3 py-2 rounded hover:bg-green-700 hover:text-white transition-all duration-300"
+              className="block px-3 py-2 rounded hover:bg-neutral-300 hover:text-white transition-all duration-300"
             >
               Beranda
             </a>
@@ -39,7 +39,7 @@ const Navbar = () => {
           <li className="relative group">
             <a
               href="#about"
-              className="block px-3 py-2 rounded hover:bg-green-700 hover:text-white transition-all duration-300"
+              className="block px-3 py-2 rounded  hover:bg-neutral-300 hover:text-white transition-all duration-300"
             >
               Tentang
             </a>

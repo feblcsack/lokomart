@@ -36,10 +36,6 @@ function App() {
       ) : (
         <Routes>
           <Route path="/" element={<Leonardo />} />
-          <Route path="/vincent" element={<Vincent />} />
-          <Route path="/pablo" element={<Pablo />} />
-          <Route path="/michaelangelo" element={<Michaelangelo />} />
-          <Route path="/dali" element={<Dali />} />
         </Routes>
       )}
       <Footer />

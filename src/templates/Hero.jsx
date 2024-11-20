@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import heroData from "../docs/HeroData";
 import { FlipWords } from "../components/ui/flip-words";
+import { CiSearch } from "react-icons/ci";
 import CardContainer from "../components/CardContainer";
 
 const Hero = ({ inputCode, handleChange, onSubmit }) => {
@@ -19,21 +20,25 @@ const Hero = ({ inputCode, handleChange, onSubmit }) => {
       <div className="absolute bottom-0 left-0 w-full h-60 bg-gradient-to-t from-white/100 via-white/40 to-transparent"></div>
 
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white p-4">
-        <form onSubmit={onSubmit} className="mb-4">
-          <input
-            type="text"
-            value={inputCode}
-            onChange={handleChange}
-            placeholder="Masukkan kode unik"
-            className="p-2 rounded-md border border-gray-300 text-black"
-          />
-          <button
-            type="submit"
-            className="ml-4 mt-3 md:mt-0 px-4 py-2 bg-orange-500 hover:bg-orange-600 text-white rounded-md"
-          >
-            Submit
-          </button>
-        </form>
+      <form
+  onSubmit={onSubmit}
+  className="mb-4 flex flex-col sm:flex-row items-center gap-4"
+>
+  <input
+    type="text"
+    value={inputCode}
+    onChange={handleChange}
+    placeholder="Masukkan kode unik"
+    className="p-3 w-full sm:w-auto focus:outline-none border border-neutral-400 rounded text-black shadow-sm"
+  />
+  <button
+    type="submit"
+    className="w-full sm:w-auto flex items-center justify-center gap-2 px-4 py-3 font-light bg-orange-500 hover:bg-orange-600 text-white rounded transition-transform transform hover:scale-105"
+  >
+    <CiSearch className="text-xl" />
+    Lacak Pesanan
+  </button>
+</form>
 
         <div className="mt-20">
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold">

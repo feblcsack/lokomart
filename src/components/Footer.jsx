@@ -1,4 +1,5 @@
 import React from "react";
+import { Tooltip } from "../pages/Tooltip";
 
 const Footer = () => {
   return (
@@ -69,7 +70,7 @@ const Footer = () => {
               </ul>
             </div>
 
-            <div>
+            {/* <div>
               <h2 class="mb-6 text-sm font-semibold uppercase text-white">
                 Sumber Data
               </h2>
@@ -120,7 +121,7 @@ const Footer = () => {
                   </a>
                 </li>
               </ul>
-            </div>
+            </div> */}
 
             <div>
               <h2 class="mb-6 text-sm font-semibold uppercase text-white">
@@ -141,7 +142,12 @@ const Footer = () => {
           <span class="text-center text-sm text-white/60">
             Dibuat oleh tim PKL SMKN 46 JAKARTA
           </span>
+          <div className="mt-3 w-50 md:mt-0">
+        <Tooltip/>
         </div>
+        </div>
+       
+        
       </div>
     </footer>
   );

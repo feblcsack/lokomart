@@ -68,7 +68,7 @@ const Leonardo = () => {
                 <div className="gap-2 md:gap-7 text-xs md:text-2xl">
                   <Link
                     to="/"
-                    className="block py-2 md:px-4 ml-4 rounded-2xl transition-all duration-300 bg-primary text-white px-2 md:px-10"
+                    className="block py-2 md:px-4 ml-4 rounded-2xl transition-all duration-300 bg-primary text-white px-2 "
                   >
                     Makanan & Minuman
                   </Link>
@@ -79,7 +79,9 @@ const Leonardo = () => {
           {showCard && (
             <section id="card-container" className="my-10">
               <CardContainer />
-              <Card ThreeDContent={<ThreeDObject modelUrl="/public/3d/aqua.glb" />}/>
+              {/* <Card
+                ThreeDContent={<ThreeDObject modelUrl="/public/3d/aqua.glb" />}
+              /> */}
               <CanvasPage />
             </section>
           )}
